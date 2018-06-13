@@ -1,0 +1,6 @@
+node_modules/*
+db/*
+logs/*
+settings.json
+
+!.gitkeep

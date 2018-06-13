@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Verification | Create</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Address Verification Search</h1>
+    <p>Search for a previous verification by entering your Verification ID.
+
+    <% if (locals.error) { %>
+      <h2>Search Error</h2>
+      <p style="color: red"><%= error %></p>
+      <% } %>
+
+    <form action="/search" method="POST">
+      <p>
+        <label for="requestId">
+          Verification Request ID:<br/>
+          <input id="requestId" name="requestId" type="text" placeholder="abc123..." />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Search</button>
+      </p>
+    </form>
+  </body>
+</html>

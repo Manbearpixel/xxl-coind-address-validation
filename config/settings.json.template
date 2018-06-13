@@ -1,0 +1,21 @@
+{
+  // port to listen for requests on.
+  "port" : 3000,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "dbuser",
+    "password": "password123",
+    "database": "coindb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  // wallet settings
+  "wallet": {
+    "host": "104.131.9.93",
+    "port": 8332,
+    "user": "username",
+    "pass": "password123"
+  }
+}

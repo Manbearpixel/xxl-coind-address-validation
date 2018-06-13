@@ -1,0 +1,45 @@
+{
+  "name": "xxl-coind-address-validation",
+  "version": "0.1.1",
+  "description": "Application that can validate the ownership of an address or action of a Bitcoin or Bitcoin-derived wallet owner.",
+  "main": "server.js",
+  "scripts": {
+    "serve": "DEBUG=xxl:* node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manbearpixel/xxl-coind-address-validation.git"
+  },
+  "keywords": [
+    "express",
+    "bitcoin",
+    "api",
+    "node",
+    "coind",
+    "xxl",
+    "verification",
+    "nodejs",
+    "expressjs",
+    "javascript"
+  ],
+  "author": "Pixxl <manbearpixel@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Manbearpixel/xxl-coind-address-validation/issues"
+  },
+  "homepage": "https://github.com/Manbearpixel/xxl-coind-address-validation#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jsonminify": "^0.4.1",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.0-beta4",
+    "mongoose": "^5.1.2",
+    "random-words": "^1.1.0",
+    "request": "^2.87.0",
+    "xxl-coind-express-api": "^0.1.0"
+  }
+}

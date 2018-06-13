@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Verification | Create</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Create Address Verification Request</h1>
+    <p>Create a new verification request here. Enter your Obsidian Address (public key) to get started.</p>
+
+    <% if (locals.error) { %>
+      <h2>Submission Error</h2>
+      <p style="color: red"><%= error %></p>
+      <% } %>
+
+    <form action="/create" method="POST">
+      <p>
+        <label for="address">
+          Obsidian Address:<br/>
+          <input id="address" name="address" type="text" placeholder="Xx123..." />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Create Request</button>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Verification | Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Address Verification Service</h1>
+    <p>Create a new verification request, or search for a previous request you created.</p>
+
+    <% if (locals.error) { %>
+      <h2>Notice</h2>
+      <p style="color: red"><%= error %></p>
+      <% } %>
+
+    <p>
+      <a href="/create"><button type="button">Create Request</button></a>
+      <a href="/search"><button type="button">Search for Request</button></a>
+    </p>
+  </body>
+</html>

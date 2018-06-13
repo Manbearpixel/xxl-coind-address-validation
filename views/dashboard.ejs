@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Verification | Dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Address Verification Dashboard</h1>
+    <p><a href="/logout"><button type="button">Log Out</button></a></p>
+    <p>View information about your verification request here.</p>
+    <p>Save your Validation ID for later.</p>
+    <p>ValidationID: <%= locals.validationId %></p>
+    <h2>Request Details</h2>
+    <dl>
+      <dt><%= validation.address %></dt>
+      <dd>Address</dd>
+
+      <dt><%= validation.id %></dt>
+      <dd>Request ID</dd>
+
+      <dt><%= validation.status %></dt>
+      <dd>Request Status</dd>
+    </dl>
+
+    <% if (validation.status !== 'verified') { %>
+      <h2>Request Validation</h2>
+      <h3>Secret Message</h3>
+      <p>This is the secret message you must sign with your Obsidian Address.
+        Only the person with control of the address private key will be able to sign a message successfully.</p>
+      <code><%= validation.verification %></code>
+
+      <h3>Submit Verification</h3>
+      <% if (locals.error) { %>
+        <h2>Submission Error</h2>
+        <p style="color: red"><%= error %></p>
+        <% } %>
+      <form action="/dashboard" method="POST">
+        <p>
+          <label for="signed">
+            Signed Message:<br/>
+            <input id="signed" name="signed" type="text" placeholder="xxxXXX..." />
+          </label>
+        </p>
+
+        <p>
+          <button type="submit">Submit Verification</button>
+        </p>
+      </form>
+    <% } else { %>
+      <h2>Address Verified</h2>
+    <% } %>
+  </body>
+</html>
